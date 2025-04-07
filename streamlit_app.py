@@ -1,6 +1,14 @@
 import streamlit as st
-
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+st.set_page_config(layout="wide")
+st.title("New Gallery")
+st.subheader("1.gallery项目规划", divider=True)
+st.write("我在Streamlit Cloud部署过的早期的gallery类项目由于使用的是过时的模型，近期已删除相应仓库。后面部署的Gallery项目则收集了多类模型生成的内容，Hunyuan Video Gallery项目则展示了使用Hunyuan Video生成的图片和视频，由于均达到可用水平，后续不会删除。")
+st.write("本项目用于收录新一代模型生成的内容，在每一类型合适的模型推出后部署相应板块，而更晚的模型由于到时候有合适的LLM用于编写复杂网页，相关内容将会改为在Github Pages发布。")
+st.write("此前的Streamlit项目为了在合并多个内容后减少文件数量，删除了记录使用LLM辅助生成页面的提示词的文件，本项目开始改为在对应文件的注释标出。")
+st.subheader("2.本项目模型相比旧项目的改进（或对未发布模型类型的预期改进）", divider=True)
+st.write("AI图片模型此前使用Cogview4，算是在适用分辨率范围较大的情况下在光照和细节找到比较合适的平衡点，但这两方面表现不算优秀且相当一部分提示词表现较差。对下一代模型的要求是泛化能力、结构和细节不低于Flux.1 Dev，光照表现不低于Wan2.1，最好能实现通过对话进行图片编辑。")
+st.write("AI视频模型此前使用Wan2.1 1.3b，虽然生成较快但细节和运动表现有缺陷。由于偏向视频质量，近期已改用Wan2.1 14b，8g显存下使用720p分辨率生成长度33帧，也达到了可用水平。")
+st.write("AI音乐页面此前使用YuE，虽然可用但音质较差，不少片段无声乐。下一代模型在各方面都需要改进。")
+st.write("LLM查询页面此前主要使用Deepseek R1，具有较好的推理能力但幻觉率也较高，部分回答较为空泛。下一代合适的模型将会最早推出的应该是Deepseek R2。")
+st.write("LLM散文集页面此前使用Deepseek R1，虽然在写作上取得一定突破但逻辑仍然存在问题，长文写作基本不可用。下一代模型降低幻觉率并提高推理能力和长文本能力后可以提高写作应用中的表现。")
+st.write("p5js页面因p5js提供在线部署而创建，本地页面使用iframe存在问题。此前主要使用Deepseek R1，不少程序无法完成或需要降低要求。下一代模型有望在小型项目达到较好的效果。")
