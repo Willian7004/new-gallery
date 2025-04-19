@@ -6,14 +6,14 @@
 4.“选择模式”下拉菜单选中“顺序”时，根据文件名排列视频并在第一行右侧创建下拉菜单用于选择页数。“选择模式”下拉菜单选中“随机”时，随机显示视频并在第一行右侧创建刷新按钮。“选择模式”下拉菜单选中“搜索”时，在第一行右侧创建输入框，在文件名中匹配输入框中的文字并显示对应视频
 '''
 import streamlit as st
-st.sidebar.title("AI视频")
+st.sidebar.title("Wan2.1 14b")
 st.sidebar.write("本页面展示了使用Wan2.1 14b生成的视频（720p 33帧 teacache rel_l1_treash=0.1）。生成策略上更注重生成效果，每个提示词只生成一个视频，页面布局也有调整。提示词方面，由于umt5实现了多语言，全面改用中文提示词。")
 import os
 from pathlib import Path
 import random
 
 # 设置视频目录和初始化参数
-video_dir = Path("files/video")
+video_dir = Path("files/wan2.1")
 video_files = list(video_dir.glob("*.mp4"))
 videos_per_page = 5
 
