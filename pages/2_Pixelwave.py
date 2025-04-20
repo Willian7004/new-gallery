@@ -90,3 +90,7 @@ for idx, img_name in enumerate(selected_images):
                 )
     except Exception as e:
         st.error(f"无法加载图片 {img_name}: {str(e)}")
+
+# 刷新按钮（底部）
+if st.button("刷新图片"):
+    st.session_state.refresh = not st.session_state.refresh
