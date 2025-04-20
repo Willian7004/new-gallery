@@ -46,7 +46,7 @@ if not sub_folders:
 selected_folder = st.pills("选择提示词", sub_folders, selection_mode="single",default="city")
 
 # 刷新按钮
-if st.button("刷新图片"):
+if st.button("刷新图片",key="refresh1"):
     st.session_state.refresh = not st.session_state.refresh
 
 # 获取选中文件夹的图片
@@ -92,5 +92,5 @@ for idx, img_name in enumerate(selected_images):
         st.error(f"无法加载图片 {img_name}: {str(e)}")
 
 # 刷新按钮（底部）
-if st.button("刷新图片"):
+if st.button("刷新图片",key="refresh2"):
     st.session_state.refresh = not st.session_state.refresh
