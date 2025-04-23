@@ -1,0 +1,14 @@
+offroad car
+sports car
+sedan
+wooden house
+villa
+castle
+man
+woman
+boy
+girl
+light plane
+hot air balloon
+ship
+yacht

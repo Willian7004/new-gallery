@@ -1,0 +1,18 @@
+grassland
+canyon
+beach
+forest
+lake
+valley
+village
+city
+island
+cliff
+desert
+mountain
+garden
+supermarket
+park
+library
+restaurant
+living room
